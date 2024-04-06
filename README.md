@@ -1,19 +1,16 @@
-# u1tramrinet(milktean)'s developer site (Under construction!)
+# u1tramarinet.github.io
 
-## What's u1tramrinet
+- u1tramarinet's developer site
 
-* ultramarine + net
-* 
+## Getting Started
 
-## Released apps
+This project is a starting point for a Flutter application.
 
-* no one
+A few resources to get you started if this is your first Flutter project:
 
-## Preparing apps
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-> under construction!
-
-## Contact
-
-Email: u1tramatine.milktean@gmail.com
-x: @u1tramarinet
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
