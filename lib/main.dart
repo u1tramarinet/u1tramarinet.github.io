@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:u1tramarinet/colors.dart';
 
@@ -13,7 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'u1tramarinet\'s developer site',
+      title: 'u1tlamarinet\'s dev site',
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       theme: ThemeData(
         // colorSchemeSeed: ultramarine,
         primarySwatch: ultramarinePrimarySwatch,
@@ -25,16 +28,13 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       themeMode: ThemeMode.system,
-      home: const MyHomePage(
-          title: 'u1tramarinet\'s developer site (Under construction...)'),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(AppLocalizations.of(context)!.siteName),
       ),
       body: SingleChildScrollView(
           child: Padding(
@@ -57,13 +57,13 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             _section(
-                title: 'What\'s u1tramarinet?', body: 'A. ultramarine + net'),
+                title: AppLocalizations.of(context)!.whatsMe, body: AppLocalizations.of(context)!.whatsMeAnswer),
             _divider(),
-            _section(title: 'Released apps', body: 'No one'),
+            _section(title: AppLocalizations.of(context)!.releasedApps, body: AppLocalizations.of(context)!.notYet),
             _divider(),
-            _section(title: 'Preparing apps', body: 'Under construction...'),
+            _section(title: AppLocalizations.of(context)!.preparingApps, body: AppLocalizations.of(context)!.underConstruction),
             _divider(),
-            _section(title: 'Contact', body: 'Under construction...'),
+            _section(title: AppLocalizations.of(context)!.contact, body: AppLocalizations.of(context)!.underConstruction),
           ],
         ),
       )),
