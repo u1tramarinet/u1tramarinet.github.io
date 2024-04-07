@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 const Color ultramarine = Color(0xff4b64a1);
 
 const ultramarinePrimarySwatch = MaterialColor(
-  0xff4b64a1, 
+  0xff4b64a1,
   <int, Color>{
     50: Color(0xffe5e8f1),
     100: Color(0xffbec6de),
