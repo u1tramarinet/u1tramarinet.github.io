@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:u1tramarinet/colors.dart';
 
 void main() {
@@ -14,21 +15,34 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'u1tlamarinet\'s dev site',
+      title: 'u1tlamarinet',
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      theme: ThemeData(
+      theme: _buildTheme(
         // colorSchemeSeed: ultramarine,
         primarySwatch: ultramarinePrimarySwatch,
         brightness: Brightness.light,
       ),
-      darkTheme: ThemeData(
+      darkTheme: _buildTheme(
         colorSchemeSeed: ultramarine,
         // primarySwatch: ultramarinePrimarySwatch,
         brightness: Brightness.dark,
       ),
       themeMode: ThemeMode.system,
       home: const MyHomePage(),
+    );
+  }
+
+  ThemeData _buildTheme(
+      {required Brightness brightness,
+      MaterialColor? primarySwatch,
+      Color? colorSchemeSeed}) {
+    return ThemeData(
+      brightness: brightness,
+      primarySwatch: primarySwatch,
+      colorSchemeSeed: colorSchemeSeed,
+      fontFamily: GoogleFonts.notoSans().fontFamily,
+      fontFamilyFallback: [GoogleFonts.notoSansJp().fontFamily ?? 'Roboto'],
     );
   }
 }
@@ -57,13 +71,20 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             _section(
-                title: AppLocalizations.of(context)!.whatsMe, body: AppLocalizations.of(context)!.whatsMeAnswer),
+                title: AppLocalizations.of(context)!.whatsMe,
+                body: AppLocalizations.of(context)!.whatsMeAnswer),
             _divider(),
-            _section(title: AppLocalizations.of(context)!.releasedApps, body: AppLocalizations.of(context)!.notYet),
+            _section(
+                title: AppLocalizations.of(context)!.releasedApps,
+                body: AppLocalizations.of(context)!.notYet),
             _divider(),
-            _section(title: AppLocalizations.of(context)!.preparingApps, body: AppLocalizations.of(context)!.underConstruction),
+            _section(
+                title: AppLocalizations.of(context)!.preparingApps,
+                body: AppLocalizations.of(context)!.underConstruction),
             _divider(),
-            _section(title: AppLocalizations.of(context)!.contact, body: AppLocalizations.of(context)!.underConstruction),
+            _section(
+                title: AppLocalizations.of(context)!.contact,
+                body: AppLocalizations.of(context)!.underConstruction),
           ],
         ),
       )),
