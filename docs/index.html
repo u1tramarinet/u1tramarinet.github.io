@@ -14,7 +14,7 @@
       This is a placeholder for base href that will be replaced by the value of
       the `--base-href` argument provided to `flutter build`.
     -->
-     <base href="/">
+    <base href="/">
 
     <meta charset="UTF-8">
     <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -34,15 +34,18 @@
 
     <script>
         // The value below is injected by flutter build, do not touch.
-        const serviceWorkerVersion = "2801589127";
+        const serviceWorkerVersion = "473037098";
     </script>
     <!-- This script adds the flutter initialization JS code -->
     <!--suppress HtmlUnknownTarget -->
     <script src="flutter.js" defer></script>
 </head>
 <body>
+<div id="loading" style="text-align: center"></div>
 <script>
     window.addEventListener('load', function(ev) {
+      var loading = document.querySelector('#loading');
+      loading.textContent = "Loading...";
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
@@ -50,6 +53,7 @@
         },
         onEntrypointLoaded: function(engineInitializer) {
           engineInitializer.initializeEngine().then(function(appRunner) {
+            loading.textContent = "Welcome to u1tramarine!";
             appRunner.runApp();
           });
         }
