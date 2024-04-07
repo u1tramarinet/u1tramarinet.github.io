@@ -3,6 +3,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:u1tramarinet/colors.dart';
+import 'package:u1tramarinet/scale_size.dart';
 
 void main() {
   usePathUrlStrategy();
@@ -59,6 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    double textScaleFactor = ScaleSize.textScaleFactor(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(AppLocalizations.of(context)!.siteName),
@@ -71,27 +73,38 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             _section(
-                title: AppLocalizations.of(context)!.whatsMe,
-                body: AppLocalizations.of(context)!.whatsMeAnswer),
+              title: AppLocalizations.of(context)!.whatsMe,
+              body: AppLocalizations.of(context)!.whatsMeAnswer,
+              textScaleFactor: textScaleFactor,
+            ),
             _divider(),
             _section(
-                title: AppLocalizations.of(context)!.releasedApps,
-                body: AppLocalizations.of(context)!.notYet),
+              title: AppLocalizations.of(context)!.releasedApps,
+              body: AppLocalizations.of(context)!.notYet,
+              textScaleFactor: textScaleFactor,
+            ),
             _divider(),
             _section(
-                title: AppLocalizations.of(context)!.preparingApps,
-                body: AppLocalizations.of(context)!.underConstruction),
+              title: AppLocalizations.of(context)!.preparingApps,
+              body: AppLocalizations.of(context)!.underConstruction,
+              textScaleFactor: textScaleFactor,
+            ),
             _divider(),
             _section(
-                title: AppLocalizations.of(context)!.contact,
-                body: AppLocalizations.of(context)!.underConstruction),
+              title: AppLocalizations.of(context)!.contact,
+              body: AppLocalizations.of(context)!.underConstruction,
+              textScaleFactor: textScaleFactor,
+            ),
           ],
         ),
       )),
     );
   }
 
-  Widget _section({required String title, required String body}) {
+  Widget _section(
+      {required String title,
+      required String body,
+      required double textScaleFactor}) {
     return Container(
       color: _debugColor(isDebug: Colors.red),
       child: Padding(
@@ -100,15 +113,15 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _title(title),
-            _body(body),
+            _title(title, textScaleFactor),
+            _body(body, textScaleFactor),
           ],
         ),
       ),
     );
   }
 
-  Widget _title(String title) {
+  Widget _title(String title, double textScaleFactor) {
     return Container(
       color: _debugColor(isDebug: Colors.blue),
       child: Padding(
@@ -117,11 +130,12 @@ class _MyHomePageState extends State<MyHomePage> {
             title,
             style: Theme.of(context).textTheme.headlineLarge,
             textAlign: TextAlign.start,
+            textScaler: TextScaler.linear(textScaleFactor),
           )),
     );
   }
 
-  Widget _body(String body) {
+  Widget _body(String body, double textScaleFactor) {
     return Container(
       color: _debugColor(isDebug: Colors.green),
       child: Padding(
@@ -130,6 +144,7 @@ class _MyHomePageState extends State<MyHomePage> {
           body,
           style: Theme.of(context).textTheme.headlineSmall,
           textAlign: TextAlign.start,
+          textScaler: TextScaler.linear(textScaleFactor),
         ),
       ),
     );
