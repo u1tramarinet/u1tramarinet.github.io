@@ -1,11 +1,27 @@
 {
-  "me": "u1tramarinet",
+  "siteName": "u1tramarinet",
   "underConstruction": "Under construction...",
-  "siteName": "u1tramarinet's developer site (Under construction...)",
+
   "whatsMe": "What's is u1tramarinet?",
-  "whatsMeAnswer": "A. ultramarine + net",
+  "whatsMeDescription01": "I'm something that is trying to become a humble Android app developer.",
+  "whatsMeDescription02": "I use cameras as a hobby. I may or may not be trying to develop an app on own...",
+  "whatsMeDescription03": "By the way, I like milk tea.",
+  "whatsMeDescription04": "The origin of \"u1tramarinet\" itself is that I connected \"net\" somehow to the back of one of my favorite blue colors, \nultramarine blue.",
+
+  "androidApp": "Android App",
+  "webApp": "Web App(Website)",
+
   "releasedApps": "Released apps",
-  "notYet": "Not yet",
-  "preparingApps": "Preparing apps and idea",
+  "preparing": "In Preparation...",
+  "app01": "This site(Continuing to develop on Flutter Web)",
+  "thisSite": "This site",
+
+  "preparingApps": "Apps in preparation/thinking about",
+  "app02": "Media Share Helper App",
+  "app03": "Organizer Helper App",
+  "app04": "Travel Helper App(idea stage)",
+  "app05": "Quiz/word book app(idea stage)",
+  "app06": "Color book app(アイデアレベル)",
+
   "contact": "Contact"
 }
