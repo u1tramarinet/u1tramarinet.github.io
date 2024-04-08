@@ -110,6 +110,7 @@ class _TopPageState extends State<TopPage> {
               textAlign: TextAlign.start,
               style: Theme.of(context).textTheme.titleLarge,
             ),
+            Container(height: 8,),
             for (final body in bodies) body,
           ],
         ),

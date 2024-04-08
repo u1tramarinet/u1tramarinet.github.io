@@ -67,12 +67,14 @@ class TopDrawer extends StatelessWidget {
         ListTile(
           title: Text(ResUtils.getString(context).contact),
         ),
-        for (final contact in contacts)
+        for (final contact in contacts) ...{
           linkElevatedButton(
             url: contact.getLink(kReleaseMode),
             label: contact.label,
             target: LinkTarget.blank,
-          )
+          ),
+          Container(height: 8,),
+        }
       ],
     );
   }
