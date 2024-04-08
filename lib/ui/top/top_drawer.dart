@@ -34,16 +34,38 @@ class TopDrawer extends StatelessWidget {
         link: 'https://u1tramarinet.github.io/',
         linkForDebug: 'http://localhost:59105/',
       ),
+      _LinkInfo(
+        label: 'News',
+        link: 'https://u1tramarinet.github.io/',
+        linkForDebug: 'http://localhost:59105/',
+      ),
+      _LinkInfo(
+        label: 'Character',
+        link: 'https://u1tramarinet.github.io/',
+        linkForDebug: 'http://localhost:59105/',
+      ),
+      _LinkInfo(
+        label: 'Schedule',
+        link: 'https://u1tramarinet.github.io/',
+        linkForDebug: 'http://localhost:59105/',
+      ),
+      _LinkInfo(
+        label: 'Ticket',
+        link: 'https://u1tramarinet.github.io/',
+        linkForDebug: 'http://localhost:59105/',
+      ),
     ];
 
     return Column(
       children: [
-        for (final content in contents)
+        for (final content in contents)...{
           linkElevatedButton(
             url: content.getLink(kReleaseMode),
             label: content.label,
             target: LinkTarget.self,
           ),
+          Container(height: 16,)
+        },
       ],
     );
   }
