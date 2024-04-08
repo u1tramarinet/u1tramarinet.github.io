@@ -1,11 +1,27 @@
 {
-  "me": "u1tramarinet",
+  "siteName": "u1tramarinet",
   "underConstruction": "工事中...",
-  "siteName": "u1tramarinetの開発者サイト (工事中...)",
+
   "whatsMe": "u1tramarinetとは?",
-  "whatsMeAnswer": "答え. ultramarine(群青) + net",
+  "whatsMeDescription01": "しがないAndroidアプリ開発者になろうとしている何かです。",
+  "whatsMeDescription02": "趣味でカメラを触ったり、個人でアプリを開発しようとしていたりしていなかったり...",
+  "whatsMeDescription03": "ちなみに、ミルクティーが好きです。",
+  "whatsMeDescription04": "「u1tramarinet」自体の由来は、自分の好きな青色の中の１色である、群青(ultramarine)と適当に「net」を後ろに繋げてみた、\nといったところです。",
+
+  "androidApp": "Androidアプリ",
+  "webApp": "Webアプリ(Webサイト)",
+
   "releasedApps": "リリースしたアプリたち",
-  "notYet": "まだない",
-  "preparingApps": "準備中のアプリたちや考え中のものたち",
+  "preparing": "絶賛準備中...",
+  "app01": "このサイト(Flutter Webにて継続開発中)",
+  "thisSite": "このサイト",
+
+  "preparingApps": "準備中・考え中のアプリたち",
+  "app02": "メディア共有ヘルパーアプリ",
+  "app03": "主催者ヘルパーアプリ",
+  "app04": "旅行ヘルパーアプリ(アイデアレベル)",
+  "app05": "クイズ・単語帳系アプリ(アイデアレベル)",
+  "app06": "色帳アプリ(アイデアレベル)",
+
   "contact": "連絡先"
 }
